@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #000008, #13192b);
+    color: #e7dbec;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+.color1 {color: #000008;}
+.color2 {color: #050924;}
+.color3 {color: #454f5d;}
+.color4 {color: #9497a1;}
+.color5 {color: #e7dbec;}
