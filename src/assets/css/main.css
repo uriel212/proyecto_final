@@ -1,3 +1,4 @@
+@import "tailwindcss";
 body {
     font-family: 'Roboto', sans-serif;
     background: radial-gradient(circle, #000008, #13192b);
