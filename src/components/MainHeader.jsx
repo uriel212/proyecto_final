@@ -15,7 +15,7 @@ const MainHeader = ({ title, footer_hero }) => {
                             {footer_hero}
                         </p>
                         <div className="flex space-x-4">
-                            <NavLink to="/topics-viewed-in-class" className="px-6 py-3 bg-neon rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
+                            <NavLink to="/topics-viewed-in-class" className="px-6 py-3 bg-cyber rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
                                 Ver Temas
                             </NavLink>
                             <NavLink to="/contact-us" className="px-6 py-3 border border-glass rounded-lg hover:bg-glass transition-all">
