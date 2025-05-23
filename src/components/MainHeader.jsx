@@ -1,102 +1,52 @@
+import { NavLink } from "react-router-dom";
 
-const MainHeader = ({ title, footer_hero, dynamicContent }) => {
-    const cards = Array.isArray(dynamicContent?.[0]?.cards) ? dynamicContent[0].cards : [];
-    const buttons = Array.isArray(dynamicContent?.[1]?.buttons) ? dynamicContent[1].buttons : [];
-    const hasCards = cards.length > 0;
-    const hasButtons = buttons.length > 0;
+const MainHeader = ({ title, footer_hero }) => {
     return (
-        <div className="mb-16">
-            <div className="bg-gray-100">
-                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                    <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                            <span className="relative inline-block">
-                                <svg
-                                    viewBox="0 0 52 24"
-                                    fill="currentColor"
-                                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-400 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                                >
-                                    <defs>
-                                        <pattern
-                                            id="dc223fcc-6d72-4ebc-b4ef-abe121034d6e"
-                                            x="0"
-                                            y="0"
-                                            width=".135"
-                                            height=".30"
-                                        >
-                                            <circle cx="1" cy="1" r=".7" />
-                                        </pattern>
-                                    </defs>
-                                    <rect
-                                        fill="url(#dc223fcc-6d72-4ebc-b4ef-abe121034d6e)"
-                                        width="52"
-                                        height="24"
-                                    />
-                                </svg>
-                            </span>{' '}
-                            {title}
-                        </h2>
-                        <p className="text-base text-gray-700 md:text-lg">
+        <section className="min-h-screen flex items-center pt-20 px-8">
+            <div className="container mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-8">
+                        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                            <span className="gradient-text animate-text-gradient">{title}</span>
+                            <br />Introducción a los <br />
+                            <span className="gradient-text animate-text-gradient">Sistemas de Cómputo</span>
+                        </h1>
+                        <p className="text-lg opacity-80 max-w-lg">
                             {footer_hero}
                         </p>
-                    </div>
-                    {
-                        hasButtons && (
-                            <div className="flex items-center sm:justify-center">
-                                <a
-                                    className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                    href="/"
-                                    aria-label=""
-                                >
-                                    Get started
-                                </a>
-                                <a
-                                    href="/"
-                                    aria-label=""
-                                    className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    Learn more
-                                </a>
-                            </div>
-                        )
-                    }
-                </div>
-            </div>
-            {
-                hasCards && (
-                    <div className="relative px-4 sm:px-0">
-                        <div className="absolute inset-0 bg-gray-100 h-1/2" />
-                        <div className="relative grid mx-auto overflow-hidden bg-white divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
-                            {cards.map((card, index) => (
-                                <div
-                                    key={index}
-                                    className="inline-block p-8 text-center"
-                                >
-                                    <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
-                                        <svg
-                                            className="w-10 h-10 text-deep-purple-accent-400"
-                                            stroke="currentColor"
-                                            viewBox="0 0 52 52"
-                                        >
-                                            <polygon
-                                                strokeWidth="3"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                fill="none"
-                                                points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <p className="font-bold tracking-wide text-gray-800">
-                                        {card.title}
-                                    </p>
-                                </div>
-                            ))}
+                        <div className="flex space-x-4">
+                            <NavLink to="/topics-viewed-in-class" className="px-6 py-3 bg-matrix rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition-all">
+                                Ver Temas
+                            </NavLink>
+                            <NavLink to="/contact-us" className="px-6 py-3 border border-glass rounded-lg hover:bg-glass transition-all">
+                                Contáctanos
+                            </NavLink>
                         </div>
                     </div>
-                )
-            }
-        </div>
+                    <div className="relative">
+                        <div className="tilt-effect" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                            <div className="glass-card rounded-2xl p-1">
+                                <img src="src/assets/img/INTRO.webp"
+                                    alt="Developer Coding"
+                                    className="rounded-xl w-full h-auto" />
+                            </div>
+                        </div>
+                        {/* Top left neon circle */}
+                        <div className="absolute -top-10 -left-10 w-32 h-32 bg-neon rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '0s' }}></div>
+                        {/* Top right cyber circle */}
+                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-cyber rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '2s' }}></div>
+                        {/* Bottom left neon circle */}
+                        <div className="absolute -bottom-7 -left-40 w-24 h-24 bg-neon rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '1s' }}></div>
+                        {/* Bottom right matrix circle */}
+                        <div className="absolute -bottom-10 -right-20 w-40 h-40 bg-matrix rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '3s' }}></div>
+                        {/* Center left glass circle */}
+                        <div className="absolute top-1/2 -left-24 w-28 h-28 bg-glass rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '1.5s' }}></div>
+                        {/* Center right dark glass circle */}
+                        <div className="absolute top-1/3 right-0 w-24 h-24 bg-dark-glass rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '2.5s' }}></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 
