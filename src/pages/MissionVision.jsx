@@ -69,13 +69,13 @@ const MissionVision = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row gap-8 justify-center">
           <FlipCard
-            image="src/assets/img/MISION2V.webp" // replace with your mission image
+            image="/img/MISION2V.webp" // replace with your mission image
             title="Misión"
           >
             {mission}
           </FlipCard>
           <FlipCard
-            image="src/assets/img/VISION2V.webp" // replace with your vision image
+            image="/img/VISION2V.webp" // replace with your vision image
             title="Visión"
           >
             {vision}

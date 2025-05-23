@@ -1,9 +1,9 @@
 const OurTeam = () => {
     const ourTeam = [
-        { carnet: "9960-25-5579", name: "Uriel Ortíz", image: "/src/assets/img/URIEL.jpeg", github: "https://github.com/uriel212" },
-        { carnet: "", name: "Josue", image: "/src/assets/img/JOSUE.jpeg", github: "" },
-        { carnet: "", name: "Jorge", image: "/src/assets/img/JORGE.jpeg", github: "" },
-        { carnet: "", name: "Dilan", image: "/src/assets/img/DILAN.jpeg", github: "" }
+        { carnet: "9960-25-5579", name: "Uriel Ortíz", image: "/img/URIEL.jpeg", github: "https://github.com/uriel212" },
+        { carnet: "", name: "Josue", image: "/img/JOSUE.jpeg", github: "" },
+        { carnet: "", name: "Jorge", image: "/img/JORGE.jpeg", github: "" },
+        { carnet: "", name: "Dilan", image: "/img/DILAN.jpeg", github: "" }
     ]
     return (
         <section className="pt-16">

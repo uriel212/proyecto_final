@@ -26,7 +26,7 @@ const MainHeader = ({ title, footer_hero }) => {
                     <div className="relative">
                         <div className="tilt-effect" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
                             <div className="glass-card rounded-2xl p-1">
-                                <img src="src/assets/img/INTRO.webp"
+                                <img src="/img/INTRO.webp"
                                     alt="Developer Coding"
                                     className="rounded-xl w-full h-auto" />
                             </div>
