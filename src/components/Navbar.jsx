@@ -7,9 +7,11 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-dark-glass glass-card py-4 px-8 backdrop-blur-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold gradient-text">
-          INTRO<span className="text-white">SISTEMAS</span>
-        </div>
+        <NavLink to="/">
+          <div className="text-2xl font-bold gradient-text">
+            INTRO<span className="text-white">SISTEMAS</span>
+          </div>
+        </NavLink>
 
         {/* Mobile toggle */}
         <div className="md:hidden">

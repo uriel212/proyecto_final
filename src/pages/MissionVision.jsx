@@ -43,8 +43,11 @@ const FlipCard = ({ image, title, children }) => {
             transform: "rotateY(180deg)"
           }}
         >
-          <div className="text-gray-100 whitespace-pre-line">
-            {children}
+          <div className="flex flex-col items-center justify-center overflow-auto">
+            <h2 className='text-2xl font-bold mb-4 text-cyber flex-shrink-0'>{title}</h2>
+            <div className="text-gray-100 whitespace-pre-line">
+              {children}
+            </div>
           </div>
         </div>
       </div>

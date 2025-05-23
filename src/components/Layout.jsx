@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import { Outlet } from 'react-router-dom'
 const Layout = () => {
     return (
-        <div className='relative overflow-hidden'>
+        <div className="relative overflow-hidden min-h-screen flex flex-col">
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-neon rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '0s' }}></div>
             {/* Top right cyber circle */}
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-cyber rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '2s' }}></div>
@@ -15,9 +15,12 @@ const Layout = () => {
             {/* Center right dark glass circle */}
             <div className="absolute top-1/3 right-0 w-24 h-24 bg-dark-glass rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '2.5s' }}></div>
             <Navbar />
-            <main>
+            <main className="flex-1">
                 <Outlet />
             </main>
+            <footer className="w-full text-center py-4 bg-slate-900 text-gray-300 text-sm mt-8 border-t border-slate-800 opacity-90 z-10 relative">
+                © {new Date().getFullYear()} Proyecto Final - Introducción a los Sistemas de Cómputo.
+            </footer>
         </div>
     )
 }
