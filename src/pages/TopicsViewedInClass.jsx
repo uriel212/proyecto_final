@@ -1,4 +1,6 @@
 const TopicsViewedInClass = () => {
+  const topics = [
+  ]
   return (
     <div>TopicsViewedInClass</div>
   )
