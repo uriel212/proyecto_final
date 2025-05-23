@@ -1,20 +1,110 @@
 @import "tailwindcss";
-body {
-    font-family: 'Roboto', sans-serif;
-    background: radial-gradient(circle, #000008, #13192b);
-    color: #e7dbec;
+
+@theme {
+    --color-neon: #00f0ff;
+    --color-cyber: #ff00aa;
+    --color-matrix: #00ff88;
+    --color-void: #0a0a0a;
+    --color-sample: #00ffbb;
+    --color-glass: rgba(255, 255, 255, 0.1);
+    --color-dark-glass: rgba(0, 0, 0, 0.3);
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-slow: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-text-gradient: textGradient 8s linear infinite;
+    --animate-spin-slow: spin 20s linear infinite;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
+@layer utilities {
+    .scale-up-center {
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.3);
+        }
+    }
+}
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #333;
 }
-.color1 {color: #000008;}
-.color2 {color: #050924;}
-.color3 {color: #454f5d;}
-.color4 {color: #9497a1;}
-.color5 {color: #e7dbec;}
+
+body {
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0.7;
+}
+
+.glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+    background-image: linear-gradient(90deg, #00f0ff, #ff00aa, #00ff88);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dark .gradient-text-darkmode {
+    background-image: linear-gradient(90deg, #00f0ff, #ff00aa, #00ff88);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tilt-effect {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes textGradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
