@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import { Outlet } from 'react-router-dom'
 const Layout = () => {
     return (
-        <div>
+        <div className='relative overflow-hidden'>
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-neon rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '0s' }}></div>
             {/* Top right cyber circle */}
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-cyber rounded-full opacity-20 animate-pulse-slow -z-10" style={{ animationDelay: '2s' }}></div>
