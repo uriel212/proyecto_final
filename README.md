@@ -1,12 +1,30 @@
-# React + Vite
+# Proyecto Final - Universidad
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con React y Tailwind CSS, pensada para fines educativos en la universidad.
 
-Currently, two official plugins are available:
+## Ejecución con Bun
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto utiliza [Bun](https://bun.sh/) como entorno de ejecución y gestor de paquetes. Para iniciar el proyecto:
 
-## Expanding the ESLint configuration
+```bash
+bun install
+bun run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Asegúrate de tener Bun instalado previamente.
+
+## Dependencias principales
+
+- **@headlessui/react**: Componentes accesibles y sin estilos para React.
+- **@heroicons/react**: Íconos SVG listos para usar en React.
+- **@tailwindcss/vite**: Integración de Tailwind CSS con Vite para un desarrollo rápido.
+- **react** y **react-dom**: Biblioteca principal para construir interfaces de usuario.
+- **react-router-dom**: Enrutamiento declarativo para aplicaciones React.
+- **tailwindcss**: Framework de utilidades CSS para un diseño rápido y responsivo.
+
+Estas dependencias permiten crear interfaces modernas, accesibles y fáciles de mantener.
+
+## Notas
+
+- El proyecto está pensado para ser sencillo de ejecutar y modificar.
+- Si tienes dudas sobre alguna dependencia o el flujo de trabajo, consulta la documentación oficial de cada paquete o pregunta en el grupo.
